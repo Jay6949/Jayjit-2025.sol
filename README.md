@@ -51,37 +51,4 @@ All entries and results are stored **transparently on the blockchain**, ensuring
 
 ## 🧠 Smart Contract Overview
 
-```solidity
-// SPDX-License-Identifier: MIT
-pragma solidity ^0.8.0;
-
-contract TransparentLottery {
-    address public manager;
-    address payable[] public players;
-
-    constructor() {
-        manager = msg.sender;
-    }
-
-    function enter() public payable {
-        require(msg.value >= 0.01 ether, "Minimum entry is 0.01 ETH");
-        players.push(payable(msg.sender));
-    }
-
-    function random() private view returns (uint256) {
-        return uint256(keccak256(abi.encodePacked(block.prevrandao, block.timestamp, players)));
-    }
-
-    function pickWinner() public {
-        require(msg.sender == manager, "Only manager can pick winner");
-        require(players.length > 0, "No players yet!");
-        uint256 index = random() % players.length;
-        address payable winner = players[index];
-        winner.transfer(address(this).balance);
-        delete players;
-    }
-
-    function getPlayers() public view returns (address payable[] memory) {
-        return players;
-    }
-}
+contract address : 0xCA6140EC583a65B068db9f5EC18A0946f1125C22
