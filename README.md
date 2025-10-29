@@ -61,6 +61,6 @@ Every action is **recorded on-chain**, making it tamper-proof, auditable, and tr
 🌐 Deployed Smart Contract
 
 Network: Celo Sepolia Testnet
-Contract Address: 0xCA6140EC583a65B068db9f5EC18A0946f1125C22
+Contract Address: https://celo-sepolia.blockscout.com/address/0xCA6140EC583a65B068db9f5EC18A0946f1125C22?tab=txs
 
 Explorer: View on Celo Blockscout
