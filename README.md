@@ -1,54 +1,58 @@
 # 🎰 Transparent Lottery Smart Contract
 
-A beginner-friendly **Solidity project** demonstrating how to create a **decentralized, transparent lottery system** on the blockchain.  
-Built with simplicity and clarity in mind, this project shows how smart contracts can automate trust and fairness — no intermediaries required.
+A simple, beginner-friendly **Solidity smart contract** that demonstrates how to build a **transparent and fair lottery system** on the blockchain.  
+Deployed on the **Celo Sepolia Testnet**, this project showcases the power of decentralization — where every entry, rule, and payout is visible to everyone.
 
-<img width="1801" height="915" alt="Screenshot 2025-10-29 135212" src="https://github.com/user-attachments/assets/5794b990-1929-4f3c-986d-afe1b35f9a70" />
+<img width="1610" height="775" alt="Screenshot 2025-10-30 003602" src="https://github.com/user-attachments/assets/a4e6c8c6-d222-4e76-b550-a11e2f6cf62c" />
+
 
 
 ## 🧩 Project Description
 
-The **Transparent Lottery** is a blockchain-based lottery system that ensures **complete fairness and visibility**.  
-Anyone can enter the lottery by sending a small amount of cryptocurrency, and the manager (the deployer of the contract) can randomly select a winner.  
-All transactions, entries, and results are publicly visible on-chain, ensuring **zero manipulation** and **full transparency**.
+The **Transparent Lottery** is a decentralized lottery where users can participate by sending a small amount of Ether (or Celo).  
+Once enough players have joined, the **manager** — who deployed the contract — can trigger the lottery and pick a **random winner**.  
+
+The winner automatically receives **all the Ether collected in the contract**, and the lottery resets for the next round.  
+
+Every action is **recorded on-chain**, making it tamper-proof, auditable, and transparent.
 
 ---
 
 ## 🚀 What It Does
 
-1. **Accepts Lottery Entries:**  
-   Users can participate by sending at least `0.01 ETH` using the `enter()` function.
+1. **Allows Players to Enter:**  
+   Anyone can join the lottery by sending at least **0.01 ETH** to the contract.
 
-2. **Stores Participants On-Chain:**  
-   Each participant’s wallet address is saved securely in an array of players.
+2. **Stores Participants on the Blockchain:**  
+   All players’ addresses are stored in a public array for transparency.
 
 3. **Selects a Random Winner:**  
-   The contract uses on-chain block data to generate a pseudo-random number and selects a winner.
+   The contract uses on-chain data (block timestamp, difficulty, etc.) to pick a pseudo-random winner.
 
-4. **Transfers All Funds to the Winner:**  
-   The chosen winner receives the entire Ether balance stored in the contract.
+4. **Transfers the Prize Automatically:**  
+   Once the winner is chosen, the contract sends them the entire prize pool.
 
-5. **Resets for a New Round:**  
-   After payout, the player list resets for the next lottery round.
+5. **Resets for the Next Round:**  
+   After the draw, the player list resets — ready for a new lottery round.
 
 ---
 
 ## 🌟 Features
 
-- **Fully Transparent:**  
-  Every entry and transaction is visible on the blockchain.  
+- 🔍 **100% Transparent:**  
+  Every transaction and participant is visible on the blockchain explorer.
 
-- **Fair & Autonomous:**  
-  No central authority — winner selection is automated by smart contract logic.  
+- ⚡ **Automatic Payout:**  
+  The prize is transferred directly to the winner’s wallet — no intermediaries.
 
-- **Beginner-Friendly Code:**  
-  Simple Solidity structure to help new developers understand contract flow.  
+- 👨‍💼 **Manager-Controlled Draw:**  
+  Only the contract deployer (manager) can initiate the winner selection.
 
-- **Secure Access Control:**  
-  Only the manager (contract creator) can pick a winner.  
+- 🧮 **On-Chain Randomness (Demo):**  
+  Uses `keccak256()` hashing with block data to pick a pseudo-random winner.
 
-- **Upgradeable Design:**  
-  Can be easily extended with Chainlink VRF, UI frontend, or round-based logic.
+- 💻 **Beginner-Friendly Solidity Code:**  
+  Clean, well-commented, and perfect for learning how smart contracts work.
 
 ---
 
@@ -56,6 +60,7 @@ All transactions, entries, and results are publicly visible on-chain, ensuring *
 
 🌐 Deployed Smart Contract
 
-Network: Celo (Testnet)
+Network: Celo Sepolia Testnet
 Contract Address: 0xCA6140EC583a65B068db9f5EC18A0946f1125C22
-View on Block Explorer: Celo Blockscout Explorer
+
+Explorer: View on Celo Blockscout
